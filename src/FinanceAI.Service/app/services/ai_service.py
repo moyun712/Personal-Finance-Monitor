@@ -35,7 +35,7 @@ class AIService:
         }
         
         headers = {
-            "Authorization": f"Bearer {settings.API_KEY}",
+            "Authorization": f"Bearer {settings.SILICONFLOW_API_KEY}",
             "Content-Type": "application/json"
         }
         
@@ -80,7 +80,7 @@ class AIService:
         }
         
         headers = {
-            "Authorization": f"Bearer {settings.API_KEY}",
+            "Authorization": f"Bearer {settings.SILICONFLOW_API_KEY}",
             "Content-Type": "application/json"
         }
         
@@ -143,7 +143,7 @@ class AIService:
             payload["image"] = image
         
         headers = {
-            "Authorization": f"Bearer {settings.API_KEY}",
+            "Authorization": f"Bearer {settings.SILICONFLOW_API_KEY}",
             "Content-Type": "application/json"
         }
         

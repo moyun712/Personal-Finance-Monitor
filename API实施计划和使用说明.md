@@ -530,131 +530,220 @@ curl -X POST "http://localhost:8000/api/v1/ai/generate-video" \
 8. ✅ 修改 `runserver.py` - 启动配置
 
 
-### 可用模型
+### 可用模型（按类别分类）
 
 本代金券适用于相关模型的在线体验、API 请求或微调训练，具体如下：
-以下模型的在线体验、API 请求产生的费用：
-Pro/Qwen/Qwen2.5-7B-Instruct
-deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
-fnlp/MOSS-TTSD-v0.5
-Qwen/Qwen3-VL-235B-A22B-Thinking
-Qwen/Qwen3-VL-32B-Thinking
-Pro/THUDM/glm-4-9b-chat
-black-forest-labs/FLUX.1-schnell
-Qwen/Qwen2.5-Coder-32B-Instruct
-LoRA/Qwen/Qwen2.5-7B-Instruct
-RVC-Boss/GPT-SoVITS
-LoRA/Qwen/Qwen2.5-14B-Instruct
-Qwen/Qwen3-Reranker-8B
-Qwen/Qwen3-30B-A3B-Instruct-2507
-Qwen/Qwen3-Omni-30B-A3B-Instruct
-Qwen/Qwen2.5-7B-Instruct
-Pro/BAAI/bge-m3
-deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
-THUDM/GLM-4-32B-0414
-THUDM/GLM-Z1-32B-0414
-Qwen/Qwen3-Reranker-0.6B
-moonshotai/Kimi-Dev-72B
-TeleAI/TeleSpeechASR
-Qwen/Qwen2.5-32B-Instruct
-MiniMaxAI/MiniMax-M1-80k
-Wan-AI/Wan2.2-I2V-A14B
-Qwen/Qwen3-Omni-30B-A3B-Thinking
-Qwen/Qwen3-VL-30B-A3B-Instruct
-MiniMaxAI/MiniMax-M2
-Pro/Qwen/Qwen2-7B-Instruct
-Pro/Qwen/Qwen2.5-Coder-7B-Instruct
-Qwen/Qwen2.5-72B-Instruct
-Qwen/Qwen2.5-Coder-7B-Instruct
-Pro/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
-Qwen/Qwen3-Embedding-0.6B
-Pro/THUDM/GLM-4.1V-9B-Thinking
-Qwen/Qwen3-Next-80B-A3B-Instruct
-deepseek-ai/DeepSeek-R1
-Qwen/Qwen3-VL-30B-A3B-Thinking
-LoRA/Qwen/Qwen2.5-72B-Instruct
-ascend-tribe/pangu-pro-moe
-stepfun-ai/step3
-zai-org/GLM-4.5V
-Qwen/Qwen-Image
-BAAI/bge-reranker-v2-m3
-THUDM/GLM-Z1-9B-0414
-Qwen/Qwen3-Embedding-4B
-baidu/ERNIE-4.5-VL-424B-A47B-Paddle
-Wan-AI/Wan2.2-T2V-A14B
-deepseek-ai/DeepSeek-V3
-Qwen/Qwen3-VL-8B-Instruct
-zai-org/GLM-4.6V
-deepseek-ai/DeepSeek-V2.5
-Qwen/Qwen3-32B
-baidu/ERNIE-4.5-21B-A3B-Paddle
-THUDM/GLM-4.1V-9B-Thinking
-zai-org/GLM-4.5
-zai-org/GLM-4.6
-internlm/internlm2_5-7b-chat
-LoRA/Qwen/Qwen2.5-32B-Instruct
-Qwen/QVQ-72B-Preview
-Qwen/Qwen3-30B-A3B-Thinking-2507
-Qwen/Qwen3-Coder-30B-A3B-Instruct
-Qwen/QwQ-32B
-baidu/ERNIE-4.5-300B-A47B
-ByteDance-Seed/Seed-OSS-36B-Instruct
-Kwaipilot/KAT-Dev
-FunAudioLLM/CosyVoice2-0.5B
-netease-youdao/bce-reranker-base_v1
-Qwen/Qwen2.5-72B-Instruct-128K
-Pro/black-forest-labs/FLUX.1-schnell
-Qwen/Qwen3-Coder-480B-A35B-Instruct
-zai-org/GLM-4.5-Air
-Qwen/Qwen-Image-Edit
-Qwen/Qwen3-VL-8B-Thinking
-Qwen/Qwen2.5-VL-72B-Instruct
-SeedLLM/Seed-Rice-7B
-deepseek-ai/DeepSeek-OCR
-Qwen/Qwen2-VL-72B-Instruct
-deepseek-ai/DeepSeek-R1-0528-Qwen3-8B
-deepseek-ai/DeepSeek-R1-Distill-Qwen-14B
-Tongyi-Zhiwen/QwenLong-L1-32B
-inclusionAI/Ling-mini-2.0
-Qwen/Qwen3-VL-235B-A22B-Instruct
-Qwen/Qwen3-Omni-30B-A3B-Captioner
-netease-youdao/bce-embedding-base_v1
-Pro/Qwen/Qwen2.5-VL-7B-Instruct
-Qwen/Qwen3-235B-A22B
-deepseek-ai/DeepSeek-V3.2
-deepseek-ai/deepseek-vl2
-Qwen/Qwen2.5-VL-32B-Instruct
-baidu/ERNIE-4.5-VL-28B-A3B-Paddle
-THUDM/glm-4-9b-chat
-Qwen/Qwen3-14B
-Qwen/Qwen3-Embedding-8B
-Qwen/Qwen3-Reranker-4B
-tencent/Hunyuan-MT-7B
-Qwen/Qwen2.5-14B-Instruct
-Pro/BAAI/bge-reranker-v2-m3
-Qwen/Qwen3-235B-A22B-Thinking-2507
-inclusionAI/Ling-flash-2.0
-moonshotai/Kimi-K2-Instruct-0905
-deepseek-ai/DeepSeek-V3.1-Terminus
-moonshotai/Kimi-K2-Thinking
-THUDM/GLM-Z1-Rumination-32B-0414
-Qwen/Qwen3-Next-80B-A3B-Thinking
-Qwen/Qwen-Image-Edit-2509
-IndexTeam/IndexTTS-2
-Qwen/Qwen3-VL-32B-Instruct
-Qwen/Qwen2-7B-Instruct
-black-forest-labs/FLUX.1-dev
-BAAI/bge-m3
-Kwai-Kolors/Kolors
-THUDM/GLM-4-9B-0414
-Qwen/Qwen3-30B-A3B
-tencent/Hunyuan-A13B-Instruct
-Qwen/Qwen3-235B-A22B-Instruct-2507
-inclusionAI/Ring-flash-2.0
-Qwen/Qwen3-8B
-FunAudioLLM/SenseVoiceSmall
-以下模型的微调训练所产生的费用：
-Qwen/Qwen2.5-7B-Instruct
-Qwen/Qwen2.5-32B-Instruct
-Qwen/Qwen2.5-72B-Instruct
-Qwen/Qwen2.5-14B-Instruct
+
+---
+
+#### 1. 💬 文本对话/语言模型
+
+**Qwen 通义千问系列：**
+- Qwen/Qwen2-7B-Instruct
+- Qwen/Qwen2.5-7B-Instruct
+- Qwen/Qwen2.5-14B-Instruct
+- Qwen/Qwen2.5-32B-Instruct
+- Qwen/Qwen2.5-72B-Instruct
+- Qwen/Qwen2.5-72B-Instruct-128K
+- Qwen/Qwen3-8B
+- Qwen/Qwen3-14B
+- Qwen/Qwen3-32B
+- Qwen/Qwen3-30B-A3B
+- Qwen/Qwen3-30B-A3B-Instruct-2507
+- Qwen/Qwen3-235B-A22B
+- Qwen/Qwen3-235B-A22B-Instruct-2507
+- Qwen/Qwen3-Next-80B-A3B-Instruct
+- Pro/Qwen/Qwen2-7B-Instruct
+- Pro/Qwen/Qwen2.5-7B-Instruct
+
+**DeepSeek 深度求索系列：**
+- deepseek-ai/DeepSeek-V2.5
+- deepseek-ai/DeepSeek-V3
+- deepseek-ai/DeepSeek-V3.1-Terminus
+- deepseek-ai/DeepSeek-V3.2
+
+**GLM 智谱系列：**
+- THUDM/glm-4-9b-chat
+- THUDM/GLM-4-9B-0414
+- THUDM/GLM-4-32B-0414
+- zai-org/GLM-4.5
+- zai-org/GLM-4.5-Air
+- zai-org/GLM-4.6
+- Pro/THUDM/glm-4-9b-chat
+
+**其他对话模型：**
+- internlm/internlm2_5-7b-chat
+- MiniMaxAI/MiniMax-M1-80k
+- MiniMaxAI/MiniMax-M2
+- inclusionAI/Ling-mini-2.0
+- inclusionAI/Ling-flash-2.0
+- inclusionAI/Ring-flash-2.0
+- tencent/Hunyuan-A13B-Instruct
+- moonshotai/Kimi-K2-Instruct-0905
+- ascend-tribe/pangu-pro-moe
+- stepfun-ai/step3
+- baidu/ERNIE-4.5-21B-A3B-Paddle
+- baidu/ERNIE-4.5-300B-A47B
+- SeedLLM/Seed-Rice-7B
+- Tongyi-Zhiwen/QwenLong-L1-32B
+
+---
+
+#### 2. 🧠 推理增强模型 (Thinking/Reasoning)
+
+**DeepSeek R1系列：**
+- deepseek-ai/DeepSeek-R1
+- deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
+- deepseek-ai/DeepSeek-R1-Distill-Qwen-14B
+- deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+- deepseek-ai/DeepSeek-R1-0528-Qwen3-8B
+- Pro/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
+
+**Qwen Thinking系列：**
+- Qwen/QwQ-32B
+- Qwen/QVQ-72B-Preview
+- Qwen/Qwen3-30B-A3B-Thinking-2507
+- Qwen/Qwen3-235B-A22B-Thinking-2507
+- Qwen/Qwen3-Next-80B-A3B-Thinking
+- Qwen/Qwen3-Omni-30B-A3B-Thinking
+
+**GLM Thinking系列：**
+- THUDM/GLM-Z1-9B-0414
+- THUDM/GLM-Z1-32B-0414
+- THUDM/GLM-Z1-Rumination-32B-0414
+- THUDM/GLM-4.1V-9B-Thinking
+- Pro/THUDM/GLM-4.1V-9B-Thinking
+
+**其他推理模型：**
+- moonshotai/Kimi-K2-Thinking
+
+---
+
+#### 3. 👁️ 视觉语言模型 (多模态理解)
+
+**Qwen VL系列：**
+- Qwen/Qwen2-VL-72B-Instruct
+- Qwen/Qwen2.5-VL-32B-Instruct
+- Qwen/Qwen2.5-VL-72B-Instruct
+- Qwen/Qwen3-VL-8B-Instruct
+- Qwen/Qwen3-VL-8B-Thinking
+- Qwen/Qwen3-VL-30B-A3B-Instruct
+- Qwen/Qwen3-VL-30B-A3B-Thinking
+- Qwen/Qwen3-VL-32B-Instruct
+- Qwen/Qwen3-VL-32B-Thinking
+- Qwen/Qwen3-VL-235B-A22B-Instruct
+- Qwen/Qwen3-VL-235B-A22B-Thinking
+- Pro/Qwen/Qwen2.5-VL-7B-Instruct
+
+**Qwen Omni系列：**
+- Qwen/Qwen3-Omni-30B-A3B-Instruct
+- Qwen/Qwen3-Omni-30B-A3B-Captioner
+
+**GLM VL系列：**
+- zai-org/GLM-4.5V
+- zai-org/GLM-4.6V
+
+**其他视觉模型：**
+- deepseek-ai/deepseek-vl2
+- baidu/ERNIE-4.5-VL-28B-A3B-Paddle
+- baidu/ERNIE-4.5-VL-424B-A47B-Paddle
+
+---
+
+#### 4. 🎨 图像生成模型
+
+**文生图：**
+- black-forest-labs/FLUX.1-schnell
+- black-forest-labs/FLUX.1-dev
+- Kwai-Kolors/Kolors
+- Qwen/Qwen-Image
+- Pro/black-forest-labs/FLUX.1-schnell
+
+**图像编辑：**
+- Qwen/Qwen-Image-Edit
+- Qwen/Qwen-Image-Edit-2509
+
+---
+
+#### 5. 🎬 视频生成模型
+
+- Wan-AI/Wan2.2-T2V-A14B （文生视频）
+- Wan-AI/Wan2.2-I2V-A14B （图生视频）
+
+---
+
+#### 6. 💻 代码模型
+
+**Qwen Coder系列：**
+- Qwen/Qwen2.5-Coder-7B-Instruct
+- Qwen/Qwen2.5-Coder-32B-Instruct
+- Qwen/Qwen3-Coder-30B-A3B-Instruct
+- Qwen/Qwen3-Coder-480B-A35B-Instruct
+- Pro/Qwen/Qwen2.5-Coder-7B-Instruct
+
+**其他代码模型：**
+- moonshotai/Kimi-Dev-72B
+- Kwaipilot/KAT-Dev
+- ByteDance-Seed/Seed-OSS-36B-Instruct
+
+---
+
+#### 7. 📊 嵌入模型 (Embedding)
+
+- BAAI/bge-m3
+- netease-youdao/bce-embedding-base_v1
+- Qwen/Qwen3-Embedding-0.6B
+- Qwen/Qwen3-Embedding-4B
+- Qwen/Qwen3-Embedding-8B
+- Pro/BAAI/bge-m3
+
+---
+
+#### 8. 🔄 重排序模型 (Reranker)
+
+- BAAI/bge-reranker-v2-m3
+- netease-youdao/bce-reranker-base_v1
+- Qwen/Qwen3-Reranker-0.6B
+- Qwen/Qwen3-Reranker-4B
+- Qwen/Qwen3-Reranker-8B
+- Pro/BAAI/bge-reranker-v2-m3
+
+---
+
+#### 9. 🎙️ 语音模型
+
+**语音合成 (TTS)：**
+- RVC-Boss/GPT-SoVITS
+- FunAudioLLM/CosyVoice2-0.5B
+- IndexTeam/IndexTTS-2
+- fnlp/MOSS-TTSD-v0.5
+
+**语音识别 (ASR)：**
+- TeleAI/TeleSpeechASR
+- FunAudioLLM/SenseVoiceSmall
+
+---
+
+#### 10. 🔧 LoRA微调版本
+
+- LoRA/Qwen/Qwen2.5-7B-Instruct
+- LoRA/Qwen/Qwen2.5-14B-Instruct
+- LoRA/Qwen/Qwen2.5-32B-Instruct
+- LoRA/Qwen/Qwen2.5-72B-Instruct
+
+---
+
+#### 11. 🔤 其他专用模型
+
+- deepseek-ai/DeepSeek-OCR （OCR文字识别）
+- tencent/Hunyuan-MT-7B （翻译）
+
+---
+
+#### 📌 支持微调训练的模型
+
+以下模型支持微调训练：
+- Qwen/Qwen2.5-7B-Instruct
+- Qwen/Qwen2.5-14B-Instruct
+- Qwen/Qwen2.5-32B-Instruct
+- Qwen/Qwen2.5-72B-Instruct

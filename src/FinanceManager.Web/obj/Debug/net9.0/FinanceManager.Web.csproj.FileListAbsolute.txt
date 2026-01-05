@@ -153,3 +153,4 @@ D:\projects\毕设\MyFinanceSystem\src\FinanceManager.Web\obj\Debug\net9.0\refin
 D:\projects\毕设\MyFinanceSystem\src\FinanceManager.Web\obj\Debug\net9.0\FinanceManager.Web.pdb
 D:\projects\毕设\MyFinanceSystem\src\FinanceManager.Web\obj\Debug\net9.0\FinanceManager.Web.genruntimeconfig.cache
 D:\projects\毕设\MyFinanceSystem\src\FinanceManager.Web\obj\Debug\net9.0\ref\FinanceManager.Web.dll
+D:\projects\毕设\MyFinanceSystem\src\FinanceManager.Web\obj\Debug\net9.0\FinanceManager.Web.sourcelink.json

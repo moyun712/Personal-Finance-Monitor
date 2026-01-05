@@ -3,9 +3,17 @@ using FinanceManager.Web.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// ========== 加载配置文件 ==========
+// 配置文件在 config 目录下
+builder.Configuration
+    .SetBasePath(builder.Environment.ContentRootPath)
+    .AddJsonFile("config/appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile($"config/appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true);
+
 // ========== 1. 添加数据库服务 ==========
 // 从appsettings.json读取连接字符串
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+Console.WriteLine($"数据库连接字符串: {connectionString}");
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(connectionString));
 
@@ -30,11 +38,11 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// ========== 自动创建数据库 (如果不存在) ==========
+// ========== 5. 自动应用数据库迁移 ==========
 using (var scope = app.Services.CreateScope())
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    dbContext.Database.EnsureCreated();  // 自动创建数据库
+    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    context.Database.Migrate(); // 应用所有待执行的迁移，这会创建数据库文件
 }
 
 app.UseCors("AllowVue");
