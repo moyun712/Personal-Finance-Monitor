@@ -1,0 +1,27 @@
+/* ── Design Tokens / CSS Variables ────────────────────────────
+ * Colour system from the product requirements document.
+ * ──────────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Semantic colours ── */
+  --color-income: #22c55e;       /* 收入绿 */
+  --color-expense: #ef4444;      /* 支出红 */
+  --color-warning: #f97316;      /* 预警橙 */
+
+  /* ── Budget pool colours ── */
+  --color-fixed: #3b82f6;        /* 刚性蓝 */
+  --color-flexible: #f97316;     /* 弹性黄/橙 */
+  --color-unexpected: #ec4899;   /* 意外粉 */
+
+  /* ── Health indicator ── */
+  --color-health-good: #22c55e;  /* 绿 */
+  --color-health-warn: #f97316;  /* 橙 */
+  --color-health-bad: #ef4444;   /* 红 */
+
+  /* ── Neutral palette ── */
+  --color-bg: #f5f5f5;
+  --color-surface: #ffffff;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #666666;
+  --color-border: #e5e5e5;
+}
