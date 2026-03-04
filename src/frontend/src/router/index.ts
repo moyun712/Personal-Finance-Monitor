@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { useAuthStore } from '@/stores/auth'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,13 +20,46 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: () => import('@/views/LoginView.vue'),
+      meta: { guest: true },
     },
     {
       path: '/register',
       name: 'register',
       component: () => import('@/views/RegisterView.vue'),
+      meta: { guest: true },
+    },
+    {
+      path: '/onboarding',
+      name: 'onboarding',
+      component: () => import('@/views/OnboardingView.vue'),
     },
   ],
+})
+
+// ── Navigation guard: auth & onboarding redirect ─────────────
+router.beforeEach((to, _from, next) => {
+  const authStore = useAuthStore()
+
+  // Pages that don't require authentication
+  const isGuestPage = to.meta.guest === true
+  const isOnboarding = to.name === 'onboarding'
+
+  if (!authStore.isLoggedIn && !isGuestPage && !isOnboarding) {
+    // Not logged in → redirect to login
+    return next({ name: 'login' })
+  }
+
+  if (authStore.isLoggedIn && isGuestPage) {
+    // Already logged in → redirect away from login/register
+    return next({ name: 'home' })
+  }
+
+  if (authStore.isLoggedIn && authStore.needsOnboarding && !isOnboarding) {
+    // Needs onboarding → force to onboarding page
+    return next({ name: 'onboarding' })
+  }
+
+  next()
 })
 
 export default router
